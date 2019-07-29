@@ -1,0 +1,21 @@
+{
+  "name": "semantic-react-cli",
+  "version": "1.0.0",
+  "description": "A simple, make-shift toolchain to create react apps, ready with semantic-react components library support.",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "func() { npm run create-app \"$*\" && npm run install-semantic \"$*\" && npm run add-semantic-theme \"$*\"; }; func",
+    "create-app": "create-react-app ",
+    "install-semantic": "npm i --save --silent semantic-ui-react@0.87.3 semantic-ui-css@2.4.1 --prefix ",
+    "add-semantic-theme": "node semantic-react-cli.js ",
+    "publish:npm": "SET NODE_ENV=production && rm -rf dist && mkdir dist && npx babel ./ --out-dir dist --copy-files"
+  },
+  "keywords": ["semantic", "semantic-react", "semantic-ui", "semantic-ui-react", "semantic-react-framework"],
+  "author": "Premkumar Alexis Jegannathan",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^3.0.1"
+  }
+}
